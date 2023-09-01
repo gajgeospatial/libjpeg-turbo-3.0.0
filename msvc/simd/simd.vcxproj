@@ -1,0 +1,845 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="vs2019_Debug|x64">
+      <Configuration>vs2019_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2019_Release|x64">
+      <Configuration>vs2019_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2022_Debug|x64">
+      <Configuration>vs2022_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2022_Release|x64">
+      <Configuration>vs2022_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2F2C9104-FAB1-3593-A9BB-8E8A578E1044}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>simd</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\simd\simd.dir\nasm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">simd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">simd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">simd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">simd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">simd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">simd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">simd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">simd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <NASM>
+      <IncludePaths>N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\;N:\Development\Dev_Base\libjpeg-turbo-3.0.0\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>"%3B"-DWIN64"%3B"-D__x86_64__"%3B"-IN:/Development/Dev_Base/libjpeg-turbo-3.0.0/simd/nasm/"%3B"-IN:/Development/Dev_Base/libjpeg-turbo-3.0.0/simd/x86_64/</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <Outputswitch>1</Outputswitch>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </NASM>
+    <Midl>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <NASM>
+      <IncludePaths>N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\;N:\Development\Dev_Base\libjpeg-turbo-3.0.0\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>"%3B"-DWIN64"%3B"-D__x86_64__"%3B"-IN:/Development/Dev_Base/libjpeg-turbo-3.0.0/simd/nasm/"%3B"-IN:/Development/Dev_Base/libjpeg-turbo-3.0.0/simd/x86_64/</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <Outputswitch>1</Outputswitch>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </NASM>
+    <Midl>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <NASM>
+      <IncludePaths>N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\;N:\Development\Dev_Base\libjpeg-turbo-3.0.0\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>"%3B"-DWIN64"%3B"-D__x86_64__"%3B"-IN:/Development/Dev_Base/libjpeg-turbo-3.0.0/simd/nasm/"%3B"-IN:/Development/Dev_Base/libjpeg-turbo-3.0.0/simd/x86_64/</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <Outputswitch>1</Outputswitch>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </NASM>
+    <Midl>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <NASM>
+      <IncludePaths>N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\;N:\Development\Dev_Base\libjpeg-turbo-3.0.0\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>"%3B"-DWIN64"%3B"-D__x86_64__"%3B"-IN:/Development/Dev_Base/libjpeg-turbo-3.0.0/simd/nasm/"%3B"-IN:/Development/Dev_Base/libjpeg-turbo-3.0.0/simd/x86_64/</AdditionalOptions>
+      <Outputswitch>1</Outputswitch>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </NASM>
+    <Midl>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <NASM>
+      <IncludePaths>N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\;N:\Development\Dev_Base\libjpeg-turbo-3.0.0\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>"%3B"-DWIN64"%3B"-D__x86_64__"%3B"-IN:/Development/Dev_Base/libjpeg-turbo-3.0.0/simd/nasm/"%3B"-IN:/Development/Dev_Base/libjpeg-turbo-3.0.0/simd/x86_64/</AdditionalOptions>
+      <Outputswitch>1</Outputswitch>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </NASM>
+    <Midl>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <NASM>
+      <IncludePaths>N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\;N:\Development\Dev_Base\libjpeg-turbo-3.0.0\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>"%3B"-DWIN64"%3B"-D__x86_64__"%3B"-IN:/Development/Dev_Base/libjpeg-turbo-3.0.0/simd/nasm/"%3B"-IN:/Development/Dev_Base/libjpeg-turbo-3.0.0/simd/x86_64/</AdditionalOptions>
+      <Outputswitch>1</Outputswitch>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </NASM>
+    <Midl>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <NASM>
+      <IncludePaths>N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\;N:\Development\Dev_Base\libjpeg-turbo-3.0.0\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>"%3B"-DWIN64"%3B"-D__x86_64__"%3B"-IN:/Development/Dev_Base/libjpeg-turbo-3.0.0/simd/nasm/"%3B"-IN:/Development/Dev_Base/libjpeg-turbo-3.0.0/simd/x86_64/</AdditionalOptions>
+      <Outputswitch>1</Outputswitch>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </NASM>
+    <Midl>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <NASM>
+      <IncludePaths>N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\;N:\Development\Dev_Base\libjpeg-turbo-3.0.0\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>"%3B"-DWIN64"%3B"-D__x86_64__"%3B"-IN:/Development/Dev_Base/libjpeg-turbo-3.0.0/simd/nasm/"%3B"-IN:/Development/Dev_Base/libjpeg-turbo-3.0.0/simd/x86_64/</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <Outputswitch>1</Outputswitch>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </NASM>
+    <Midl>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\simd\x86_64\jsimd.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\simd\x86_64\jccolor-avx2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jccolor-avx2.asm -o$(IntDir)\jccolor-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jccolor-avx2.asm -o$(IntDir)\jccolor-avx2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jccolor-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jccolor-avx2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jccolor-avx2.asm -o$(IntDir)\jccolor-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jccolor-avx2.asm -o$(IntDir)\jccolor-avx2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jccolor-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jccolor-avx2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jccolor-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jccolor-avx2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jccolor-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jccolor-avx2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jccolor-sse2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jccolor-sse2.asm -o$(IntDir)\jccolor-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jccolor-sse2.asm -o$(IntDir)\jccolor-sse2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jccolor-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jccolor-sse2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jccolor-sse2.asm -o$(IntDir)\jccolor-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jccolor-sse2.asm -o$(IntDir)\jccolor-sse2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jccolor-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jccolor-sse2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jccolor-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jccolor-sse2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jccolor-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jccolor-sse2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jcgray-avx2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcgray-avx2.asm -o$(IntDir)\jcgray-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcgray-avx2.asm -o$(IntDir)\jcgray-avx2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jcgray-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jcgray-avx2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcgray-avx2.asm -o$(IntDir)\jcgray-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcgray-avx2.asm -o$(IntDir)\jcgray-avx2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jcgray-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jcgray-avx2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jcgray-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jcgray-avx2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jcgray-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jcgray-avx2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jcgray-sse2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcgray-sse2.asm -o$(IntDir)\jcgray-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcgray-sse2.asm -o$(IntDir)\jcgray-sse2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jcgray-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jcgray-sse2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcgray-sse2.asm -o$(IntDir)\jcgray-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcgray-sse2.asm -o$(IntDir)\jcgray-sse2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jcgray-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jcgray-sse2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jcgray-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jcgray-sse2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jcgray-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jcgray-sse2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jchuff-sse2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jchuff-sse2.asm -o$(IntDir)\jchuff-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jchuff-sse2.asm -o$(IntDir)\jchuff-sse2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jchuff-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jchuff-sse2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jchuff-sse2.asm -o$(IntDir)\jchuff-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jchuff-sse2.asm -o$(IntDir)\jchuff-sse2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jchuff-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jchuff-sse2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jchuff-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jchuff-sse2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jchuff-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jchuff-sse2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jcphuff-sse2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcphuff-sse2.asm -o$(IntDir)\jcphuff-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcphuff-sse2.asm -o$(IntDir)\jcphuff-sse2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jcgray-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jcgray-sse2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcphuff-sse2.asm -o$(IntDir)\jcphuff-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcphuff-sse2.asm -o$(IntDir)\jcphuff-sse2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jcphuff-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jcphuff-sse2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jcphuff-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jcphuff-sse2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jcphuff-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jcphuff-sse2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jcsample-avx2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcsample-avx2.asm -o$(IntDir)\jcsample-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcsample-avx2.asm -o$(IntDir)\jcsample-avx2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jcsample-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jcsample-avx2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcgray-sse2.asm -o$(IntDir)\jcsample-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcgray-sse2.asm -o$(IntDir)\jcsample-avx2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jcsample-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jcsample-avx2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jcsample-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jcsample-avx2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jcsample-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jcsample-avx2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jcsample-sse2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcsample-sse2.asm -o$(IntDir)\jcsample-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcsample-sse2.asm -o$(IntDir)\jcsample-sse2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jcsample-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jcsample-sse2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcsample-sse2.asm -o$(IntDir)\jcsample-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcsample-sse2.asm -o$(IntDir)\jcsample-sse2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jcsample-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jcsample-sse2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jcsample-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jcsample-sse2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jcsample-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jcsample-sse2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jdcolor-avx2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdcolor-avx2.asm -o$(IntDir)\jdcolor-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdcolor-avx2.asm -o$(IntDir)\jdcolor-avx2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jdcolor-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jdcolor-avx2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdcolor-avx2.asm -o$(IntDir)\jdcolor-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdcolor-avx2.asm -o$(IntDir)\jdcolor-avx2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jdcolor-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jdcolor-avx2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jdcolor-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jdcolor-avx2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jdcolor-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jdcolor-avx2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jdcolor-sse2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdcolor-sse2.asm -o$(IntDir)\jdcolor-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdcolor-sse2.asm -o$(IntDir)\jdcolor-sse2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jdcolor-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jdcolor-sse2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdcolor-sse2.asm -o$(IntDir)\jdcolor-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdcolor-sse2.asm -o$(IntDir)\jdcolor-sse2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jdcolor-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jdcolor-sse2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jdcolor-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jdcolor-sse2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jdcolor-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jdcolor-sse2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jdmerge-avx2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdmerge-avx2.asm -o$(IntDir)\jdmerge-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdmerge-avx2.asm -o$(IntDir)\jdmerge-avx2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jdmerge-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jdmerge-avx2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdmerge-avx2.asm -o$(IntDir)\jdmerge-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdmerge-avx2.asm -o$(IntDir)\jdmerge-avx2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jdmerge-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jdmerge-avx2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jdmerge-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jdmerge-avx2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jdmerge-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jdmerge-avx2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jdmerge-sse2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdmerge-sse2.asm -o$(IntDir)\jdmerge-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdmerge-sse2.asm -o$(IntDir)\jdmerge-sse2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jdmerge-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jdmerge-sse2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdmerge-sse2.asm -o$(IntDir)\jdmerge-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdmerge-sse2.asm -o$(IntDir)\jdmerge-sse2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jdmerge-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jdmerge-sse2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jdmerge-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jdmerge-sse2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jdmerge-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jdmerge-sse2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jdsample-avx2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdsample-avx2.asm -o$(IntDir)\jdsample-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdsample-avx2.asm -o$(IntDir)\jdsample-avx2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jdsample-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jdsample-avx2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcgray-avx2.asm -o$(IntDir)\jdsample-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jcgray-avx2.asm -o$(IntDir)\jdsample-avx2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jdsample-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jdsample-avx2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jdsample-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jdsample-avx2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jdsample-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jdsample-avx2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jdsample-sse2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdsample-sse2.asm -o$(IntDir)\jdsample-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdsample-sse2.asm -o$(IntDir)\jdsample-sse2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jdsample-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jdsample-sse2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdsample-sse2.asm -o$(IntDir)\jdsample-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jdsample-sse2.asm -o$(IntDir)\jdsample-sse2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jdsample-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jdsample-sse2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jdsample-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jdsample-sse2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jdsample-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jdsample-sse2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jfdctflt-sse.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jfdctflt-sse.asm -o$(IntDir)\jfdctflt-sse.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jfdctflt-sse.asm -o$(IntDir)\jfdctflt-sse.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jfdctflt-sse.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jfdctflt-sse.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jfdctflt-sse.asm -o$(IntDir)\jfdctflt-sse.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jfdctflt-sse.asm -o$(IntDir)\jfdctflt-sse.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jfdctflt-sse.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jfdctflt-sse.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jfdctflt-sse.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jfdctflt-sse.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jfdctflt-sse.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jfdctflt-sse.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jfdctfst-sse2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jfdctfst-sse2.asm -o$(IntDir)\jfdctfst-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jfdctfst-sse2.asm -o$(IntDir)\jfdctfst-sse2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jfdctfst-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jfdctfst-sse2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jfdctfst-sse2.asm -o$(IntDir)\jfdctfst-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jfdctfst-sse2.asm -o$(IntDir)\jfdctfst-sse2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jfdctfst-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jfdctfst-sse2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jfdctfst-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jfdctfst-sse2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jfdctfst-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jfdctfst-sse2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jfdctint-avx2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jfdctint-avx2.asm -o$(IntDir)\jfdctint-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jfdctint-avx2.asm -o$(IntDir)\jfdctint-avx2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jfdctint-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jfdctint-avx2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jfdctint-avx2.asm -o$(IntDir)\jfdctint-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jfdctint-avx2.asm -o$(IntDir)\jfdctint-avx2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jfdctint-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jfdctint-avx2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jfdctint-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jfdctint-avx2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jfdctint-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jfdctint-avx2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jfdctint-sse2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jfdctint-sse2.asm -o$(IntDir)\jfdctint-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jfdctint-sse2.asm -o$(IntDir)\jfdctint-sse2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jfdctint-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jfdctint-sse2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jfdctint-sse2.asm -o$(IntDir)\jfdctint-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jfdctint-sse2.asm -o$(IntDir)\jfdctint-sse2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jfdctint-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jfdctint-sse2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jfdctint-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jfdctint-sse2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jfdctint-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jfdctint-sse2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jidctflt-sse2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctflt-sse2.asm -o$(IntDir)\jidctflt-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctflt-sse2.asm -o$(IntDir)\jidctflt-sse2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jidctflt-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jidctflt-sse2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctflt-sse2.asm -o$(IntDir)\jidctflt-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctflt-sse2.asm -o$(IntDir)\jidctflt-sse2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jidctflt-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jidctflt-sse2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jidctflt-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jidctflt-sse2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jidctflt-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jidctflt-sse2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jidctfst-sse2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctfst-sse2.asm -o$(IntDir)\jidctfst-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctfst-sse2.asm -o$(IntDir)\jidctfst-sse2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jidctfst-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jidctfst-sse2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctfst-sse2.asm -o$(IntDir)\jidctfst-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctfst-sse2.asm -o$(IntDir)\jidctfst-sse2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jidctfst-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jidctfst-sse2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jidctfst-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jidctfst-sse2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jidctfst-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jidctfst-sse2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jidctint-avx2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctint-avx2.asm -o$(IntDir)\jidctint-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctint-avx2.asm -o$(IntDir)\jidctint-avx2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jidctint-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jidctint-avx2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctint-avx2.asm -o$(IntDir)\jidctint-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctint-avx2.asm -o$(IntDir)\jidctint-avx2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jidctint-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jidctint-avx2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jidctint-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jidctint-avx2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jidctint-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jidctint-avx2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jidctint-sse2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctint-sse2.asm -o$(IntDir)\jidctint-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctint-sse2.asm -o$(IntDir)\jidctint-sse2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jidctint-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jidctint-sse2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctint-sse2.asm -o$(IntDir)\jidctint-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctint-sse2.asm -o$(IntDir)\jidctint-sse2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jidctint-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jidctint-sse2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jidctint-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jidctint-sse2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jidctint-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jidctint-sse2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jidctred-sse2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctred-sse2.asm -o$(IntDir)\jidctred-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctred-sse2.asm -o$(IntDir)\jidctred-sse2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jidctred-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jidctred-sse2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctred-sse2.asm -o$(IntDir)\jidctred-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jidctred-sse2.asm -o$(IntDir)\jidctred-sse2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jidctred-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jidctred-sse2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jidctred-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jidctred-sse2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jidctred-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jidctred-sse2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jquantf-sse2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jquantf-sse2.asm -o$(IntDir)\jquantf-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jquantf-sse2.asm -o$(IntDir)\jquantf-sse2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jquantf-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jquantf-sse2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jquantf-sse2.asm -o$(IntDir)\jquantf-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jquantf-sse2.asm -o$(IntDir)\jquantf-sse2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jquantf-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jquantf-sse2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jquantf-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jquantf-sse2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jquantf-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jquantf-sse2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jquanti-avx2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jquanti-avx2.asm -o$(IntDir)\jquanti-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jquanti-avx2.asm -o$(IntDir)\jquanti-avx2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jquanti-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jquanti-avx2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jquanti-avx2.asm -o$(IntDir)\jquanti-avx2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jquanti-avx2.asm -o$(IntDir)\jquanti-avx2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jquanti-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jquanti-avx2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jquanti-avx2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jquanti-avx2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jquanti-avx2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jquanti-avx2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jquanti-sse2.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jquanti-sse2.asm -o$(IntDir)\jquanti-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jquanti-sse2.asm -o$(IntDir)\jquanti-sse2.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jquanti-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jquanti-sse2.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jquanti-sse2.asm -o$(IntDir)\jquanti-sse2.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jquanti-sse2.asm -o$(IntDir)\jquanti-sse2.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jquanti-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jquanti-sse2.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jquanti-sse2.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jquanti-sse2.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jquanti-sse2.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jquanti-sse2.asm</Message>
+    </CustomBuild>
+    <CustomBuild Include="..\..\simd\x86_64\jsimdcpu.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jsimdcpu.asm -o$(IntDir)\jsimdcpu.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jsimdcpu.asm -o$(IntDir)\jsimdcpu.asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(IntDir)\jsimdcpu.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(IntDir)\jsimdcpu.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jsimdcpu.asm -o$(IntDir)\jsimdcpu.asm.obj</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"..\..\simd\nasm" -I"..\..\simd\x86_64" ..\..\simd\x86_64\jsimdcpu.asm -o$(IntDir)\jsimdcpu.asm.obj</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">Assembling jsimdcpu.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">Assembling jsimdcpu.asm</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(IntDir)\jsimdcpu.asm.obj</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(IntDir)\jsimdcpu.asm.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">Assembling jsimdcpu.asm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">Assembling jsimdcpu.asm</Message>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="C:\Program Files\CMake\share\cmake-3.20\Templates\MSBuild\nasm.targets" />
+  </ImportGroup>
+</Project>

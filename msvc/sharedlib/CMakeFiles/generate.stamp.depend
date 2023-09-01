@@ -1,0 +1,4 @@
+# CMake generation dependency list for this directory.
+C:\Program Files\CMake\share\cmake-3.20\Templates\MSBuild\nasm.props.in
+N:/Development/Dev_Base/libjpeg-turbo-3.0.0/sharedlib/CMakeLists.txt
+N:/Development/Dev_Base/libjpeg-turbo-3.0.0/win/jpeg.rc.in

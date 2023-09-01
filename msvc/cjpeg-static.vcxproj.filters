@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\cjpeg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cdjpeg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rdbmp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rdgif.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rdppm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rdswitch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rdtarga.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include=".\cjpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\rdgif.obj" />
+    <Object Include=".\cjpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\rdppm.obj" />
+    <Object Include=".\cjpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\rdgif.obj" />
+    <Object Include=".\cjpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\rdppm.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{49CBF4A5-365B-3E8C-878B-FAF0ECF2708A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{68D837FA-75C8-3B0C-9E3E-83E8B61373F7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

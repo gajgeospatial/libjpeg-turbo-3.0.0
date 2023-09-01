@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\jcapistd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jccolor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jcdiffct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jclossls.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jcmainct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jcprepct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jcsample.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdapistd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdcolor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jddiffct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdlossls.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdmainct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdpostct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdsample.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jutils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jccoefct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jcdctmgr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdcoefct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jddctmgr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdmerge.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jfdctfst.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jfdctint.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jidctflt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jidctfst.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jidctint.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jidctred.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jquant1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jquant2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jcapimin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jchuff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jcicc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jcinit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jclhuff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jcmarker.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jcmaster.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jcomapi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jcparam.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jcphuff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jctrans.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdapimin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdatadst.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdatasrc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdhuff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdicc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdinput.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdlhuff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdmarker.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdmaster.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdphuff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdtrans.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jerror.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jfdctflt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jmemmgr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jmemnobs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jaricom.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jcarith.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdarith.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\turbojpeg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\transupp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdatadst-tj.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jdatasrc-tj.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rdbmp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rdppm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wrbmp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wrppm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jsimd.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcapistd.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jccolor.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcdiffct.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jclossls.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcmainct.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcprepct.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcsample.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdapistd.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdcolor.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jddiffct.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdlossls.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdmainct.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdpostct.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdsample.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jutils.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jccoefct.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcdctmgr.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdcoefct.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jddctmgr.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdmerge.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jfdctfst.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jfdctint.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctflt.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctfst.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctint.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctred.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jquant1.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jquant2.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcapistd.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jccolor.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcdiffct.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jclossls.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcmainct.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcprepct.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcsample.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdapistd.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdcolor.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jddiffct.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdlossls.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdmainct.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdpostct.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdsample.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jutils.obj" />
+    <Object Include=".\turbojpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\rdppm.obj" />
+    <Object Include=".\turbojpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\wrppm.obj" />
+    <Object Include=".\turbojpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\rdppm.obj" />
+    <Object Include=".\turbojpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\wrppm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jsimdcpu.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jfdctflt-sse.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jccolor-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcgray-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jchuff-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcphuff-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcsample-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdcolor-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdmerge-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdsample-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jfdctfst-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jfdctint-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctflt-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctfst-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctint-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctred-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jquantf-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jquanti-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jccolor-avx2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcgray-avx2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcsample-avx2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdcolor-avx2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdmerge-avx2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdsample-avx2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jfdctint-avx2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctint-avx2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jquanti-avx2.asm.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Object Files">
+      <UniqueIdentifier>{E9FFA1B3-4F7F-374F-B73C-8FEA791218D1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{49CBF4A5-365B-3E8C-878B-FAF0ECF2708A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{68D837FA-75C8-3B0C-9E3E-83E8B61373F7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

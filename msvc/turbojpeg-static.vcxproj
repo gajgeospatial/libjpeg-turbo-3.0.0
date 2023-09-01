@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="vs2019_Debug|x64">
+      <Configuration>vs2019_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2019_Release|x64">
+      <Configuration>vs2019_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2022_Debug|x64">
+      <Configuration>vs2022_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2022_Release|x64">
+      <Configuration>vs2022_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{454EC7D9-F7B3-3018-8B00-4ED25142F147}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>turbojpeg-static</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\turbojpeg-static.dir\nasm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">turbojpeg-static</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">turbojpeg-static</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">turbojpeg-static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">turbojpeg-static</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">turbojpeg-static</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">turbojpeg-static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">turbojpeg-static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">turbojpeg-static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <NASM>
+      <IncludePaths>N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\;N:\Development\Dev_Base\libjpeg-turbo-3.0.0\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>-f</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </NASM>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <NASM>
+      <IncludePaths>N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\;N:\Development\Dev_Base\libjpeg-turbo-3.0.0\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>-f</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </NASM>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <NASM>
+      <IncludePaths>N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\;N:\Development\Dev_Base\libjpeg-turbo-3.0.0\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>-f</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </NASM>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <NASM>
+      <IncludePaths>N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\;N:\Development\Dev_Base\libjpeg-turbo-3.0.0\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>-f</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </NASM>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <NASM>
+      <IncludePaths>N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\;N:\Development\Dev_Base\libjpeg-turbo-3.0.0\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>-f</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </NASM>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <NASM>
+      <IncludePaths>N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\;N:\Development\Dev_Base\libjpeg-turbo-3.0.0\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>-f</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </NASM>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <NASM>
+      <IncludePaths>N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\;N:\Development\Dev_Base\libjpeg-turbo-3.0.0\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>-f</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </NASM>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <NASM>
+      <IncludePaths>N:\Development\Dev_Base\libjpeg-turbo-3.0.0\msvc\;N:\Development\Dev_Base\libjpeg-turbo-3.0.0\;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>-f</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BMP_SUPPORTED;PPM_SUPPORTED;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </NASM>
+    <Midl>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\jcapistd.c" />
+    <ClCompile Include="..\jccolor.c" />
+    <ClCompile Include="..\jcdiffct.c" />
+    <ClCompile Include="..\jclossls.c" />
+    <ClCompile Include="..\jcmainct.c" />
+    <ClCompile Include="..\jcprepct.c" />
+    <ClCompile Include="..\jcsample.c" />
+    <ClCompile Include="..\jdapistd.c" />
+    <ClCompile Include="..\jdcolor.c" />
+    <ClCompile Include="..\jddiffct.c" />
+    <ClCompile Include="..\jdlossls.c" />
+    <ClCompile Include="..\jdmainct.c" />
+    <ClCompile Include="..\jdpostct.c" />
+    <ClCompile Include="..\jdsample.c" />
+    <ClCompile Include="..\jutils.c" />
+    <ClCompile Include="..\jccoefct.c" />
+    <ClCompile Include="..\jcdctmgr.c" />
+    <ClCompile Include="..\jdcoefct.c" />
+    <ClCompile Include="..\jddctmgr.c" />
+    <ClCompile Include="..\jdmerge.c" />
+    <ClCompile Include="..\jfdctfst.c" />
+    <ClCompile Include="..\jfdctint.c" />
+    <ClCompile Include="..\jidctflt.c" />
+    <ClCompile Include="..\jidctfst.c" />
+    <ClCompile Include="..\jidctint.c" />
+    <ClCompile Include="..\jidctred.c" />
+    <ClCompile Include="..\jquant1.c" />
+    <ClCompile Include="..\jquant2.c" />
+    <ClCompile Include="..\jcapimin.c" />
+    <ClCompile Include="..\jchuff.c" />
+    <ClCompile Include="..\jcicc.c" />
+    <ClCompile Include="..\jcinit.c" />
+    <ClCompile Include="..\jclhuff.c" />
+    <ClCompile Include="..\jcmarker.c" />
+    <ClCompile Include="..\jcmaster.c" />
+    <ClCompile Include="..\jcomapi.c" />
+    <ClCompile Include="..\jcparam.c" />
+    <ClCompile Include="..\jcphuff.c" />
+    <ClCompile Include="..\jctrans.c" />
+    <ClCompile Include="..\jdapimin.c" />
+    <ClCompile Include="..\jdatadst.c" />
+    <ClCompile Include="..\jdatasrc.c" />
+    <ClCompile Include="..\jdhuff.c" />
+    <ClCompile Include="..\jdicc.c" />
+    <ClCompile Include="..\jdinput.c" />
+    <ClCompile Include="..\jdlhuff.c" />
+    <ClCompile Include="..\jdmarker.c" />
+    <ClCompile Include="..\jdmaster.c" />
+    <ClCompile Include="..\jdphuff.c" />
+    <ClCompile Include="..\jdtrans.c" />
+    <ClCompile Include="..\jerror.c" />
+    <ClCompile Include="..\jfdctflt.c" />
+    <ClCompile Include="..\jmemmgr.c" />
+    <ClCompile Include="..\jmemnobs.c" />
+    <ClCompile Include="..\jaricom.c" />
+    <ClCompile Include="..\jcarith.c" />
+    <ClCompile Include="..\jdarith.c" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jsimd.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jsimdcpu.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jfdctflt-sse.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jccolor-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcgray-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jchuff-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcphuff-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcsample-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdcolor-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdmerge-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdsample-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jfdctfst-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jfdctint-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctflt-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctfst-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctint-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctred-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jquantf-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jquanti-sse2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jccolor-avx2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcgray-avx2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcsample-avx2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdcolor-avx2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdmerge-avx2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdsample-avx2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jfdctint-avx2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctint-avx2.asm.obj" />
+    <Object Include=".\simd\simd.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jquanti-avx2.asm.obj" />
+    <ClCompile Include="..\turbojpeg.c" />
+    <ClCompile Include="..\transupp.c" />
+    <ClCompile Include="..\jdatadst-tj.c" />
+    <ClCompile Include="..\jdatasrc-tj.c" />
+    <ClCompile Include="..\rdbmp.c" />
+    <ClCompile Include="..\rdppm.c" />
+    <ClCompile Include="..\wrbmp.c" />
+    <ClCompile Include="..\wrppm.c" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcapistd.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jccolor.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcdiffct.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jclossls.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcmainct.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcprepct.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcsample.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdapistd.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdcolor.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jddiffct.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdlossls.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdmainct.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdpostct.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdsample.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jutils.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jccoefct.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcdctmgr.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdcoefct.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jddctmgr.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdmerge.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jfdctfst.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jfdctint.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctflt.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctfst.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctint.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jidctred.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jquant1.obj" />
+    <Object Include=".\jpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jquant2.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcapistd.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jccolor.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcdiffct.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jclossls.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcmainct.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcprepct.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jcsample.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdapistd.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdcolor.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jddiffct.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdlossls.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdmainct.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdpostct.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jdsample.obj" />
+    <Object Include=".\jpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\jutils.obj" />
+    <Object Include=".\turbojpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\rdppm.obj" />
+    <Object Include=".\turbojpeg12-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\wrppm.obj" />
+    <Object Include=".\turbojpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\rdppm.obj" />
+    <Object Include=".\turbojpeg16-static.dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\wrppm.obj" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="C:\Program Files\CMake\share\cmake-3.20\Templates\MSBuild\nasm.targets" />
+  </ImportGroup>
+</Project>
